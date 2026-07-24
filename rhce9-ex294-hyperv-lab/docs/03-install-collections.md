@@ -1,0 +1,1 @@
+Use the exact content I gave you in the previous message (the "Installing Ansible Collections (ansible-core 2.12 workaround)" doc). Paste it here verbatim.

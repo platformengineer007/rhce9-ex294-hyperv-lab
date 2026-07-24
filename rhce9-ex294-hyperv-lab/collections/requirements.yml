@@ -1,0 +1,10 @@
+---
+# For the fully offline / vendored workflow (see docs/03).
+# Commit the tarballs under vendor/collections/ (Git LFS recommended),
+# then: ansible-galaxy collection install -r collections/requirements.yml --no-deps
+#
+# Versions pinned for ansible-core 2.12 (RHEL 9.0 AppStream):
+#   community.general 7.x needs ansible-core >= 2.13, so stay on 6.x.
+collections:
+  - name: ./vendor/collections/ansible-posix-1.5.4.tar.gz
+  - name: ./vendor/collections/community-general-6.6.0.tar.gz
