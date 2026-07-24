@@ -4,9 +4,7 @@ Fully automated, zero-touch deployment of an **RHCE EX294 (RHEL 9)** practice la
 on **Windows 11 Pro** using **Hyper-V** and **PowerShell**. One script builds a
 control node and four managed nodes via kickstart — no manual OS install.
 
-> Inspired by community RHCE labs (e.g. `x69van/rhce9-ex294-practice-lab`), but
-> reworked for native **Hyper-V + PowerShell** automation instead of
-> Vagrant/VirtualBox/KVM.
+Native **Hyper-V + PowerShell** automation instead of Vagrant/VirtualBox/KVM.
 
 ## Topology
 
@@ -44,14 +42,12 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 ssh ansible@192.168.55.200
 
 
-
 See [`docs/`](docs/) for full details, collection install workaround, troubleshooting, and practice exercises.
 
 ## Reset / teardown
 
 powershell
 .\Reset-RhceLab.ps1
-
 
 
 ## Documentation
@@ -64,21 +60,10 @@ powershell
 
 ## Disclaimer
 
-This lab is for **self-study only**. It is **not** affiliated with or endorsed by
-Red Hat, and contains **no exam content**. "RHCE" and "Red Hat" are trademarks of
-Red Hat, Inc. You must supply your own RHEL ISO / subscription (or use a
-compatible RHEL rebuild such as Rocky Linux or AlmaLinux).
-
-## License
-
-MIT — see [LICENSE](LICENSE).
+This lab is for **self-study only.
 
 Repository structure
-plaintext
 
-Download
-
-Copy
 rhce9-ex294-hyperv-lab/
 ├── README.md
 ├── LICENSE
