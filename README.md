@@ -2,7 +2,7 @@
 
 Fully automated, zero-touch deployment of an **RHCE EX294 (RHEL 9)** practice lab
 on **Windows 11 Pro** using **Hyper-V** and **PowerShell**. One script builds a
-control node and four managed nodes via kickstart — no manual OS install.
+control node and four managed nodes via kickstart no manual OS install.
 
 Native **Hyper-V + PowerShell** automation instead of Vagrant/VirtualBox/KVM.
 
