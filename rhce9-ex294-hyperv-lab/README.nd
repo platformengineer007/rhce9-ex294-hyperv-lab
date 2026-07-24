@@ -30,3 +30,73 @@ control node and four managed nodes via kickstart — no manual OS install.
 
 ## Quick start
 
+powershell
+
+1. Enable Hyper-V (reboot afterwards)
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
+
+2. Edit the CONFIG block in Deploy-RhceLab.ps1 — set $RhelIso to your ISO path
+3. Deploy (elevated Windows PowerShell 5.1)
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\Deploy-RhceLab.ps1
+
+4. When installs finish (~5-10 min each), log into the control node
+ssh ansible@192.168.55.200
+
+
+
+See [`docs/`](docs/) for full details, collection install workaround, troubleshooting, and practice exercises.
+
+## Reset / teardown
+
+powershell
+.\Reset-RhceLab.ps1
+
+
+
+## Documentation
+
+- [01 – Prerequisites](docs/01-prerequisites.md)
+- [02 – Deploy the lab](docs/02-deploy.md)
+- [03 – Install Ansible collections (ansible-core 2.12 workaround)](docs/03-install-collections.md)
+- [04 – Troubleshooting](docs/04-troubleshooting.md)
+- [05 – Practice exercises](docs/05-exercises.md)
+
+## Disclaimer
+
+This lab is for **self-study only**. It is **not** affiliated with or endorsed by
+Red Hat, and contains **no exam content**. "RHCE" and "Red Hat" are trademarks of
+Red Hat, Inc. You must supply your own RHEL ISO / subscription (or use a
+compatible RHEL rebuild such as Rocky Linux or AlmaLinux).
+
+## License
+
+MIT — see [LICENSE](LICENSE).
+
+Repository structure
+plaintext
+
+Download
+
+Copy
+rhce9-ex294-hyperv-lab/
+├── README.md
+├── LICENSE
+├── .gitignore
+├── Deploy-RhceLab.ps1
+├── Reset-RhceLab.ps1
+├── scripts/
+│   ├── install-collections.sh
+│   └── collections.sha256
+├── collections/
+│   └── requirements.yml
+├── control-node/
+│   ├── ansible.cfg
+│   └── inventory
+└── docs/
+    ├── 01-prerequisites.md
+    ├── 02-deploy.md
+    ├── 03-install-collections.md
+    ├── 04-troubleshooting.md
+    └── 05-exercises.md
+
